@@ -10,9 +10,9 @@ export default function Header() {
 
       <div>
       <a href="/">Tv shows</a>
-      <a href="/">Tv shows</a>
-      <a href="/">Tv shows</a>
-      <a href="/">Tv shows</a>
+      <a href="/">Movies</a>
+      <a href="/">Recently Added</a>
+      <a href="/">My List</a>
       </div>
     
    <ImSearch/>

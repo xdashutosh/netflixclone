@@ -11,11 +11,19 @@
     }
 
     div{
-        border: 1px solid red;
+        
+        width: 100%;
         a{
-            margin: 3rem;
+            margin: 2rem;
+            color: white;
             text-decoration: none;
+        
         }
+        a:hover{
+            color: rgba(255, 255, 255, 0.808);
+        }    
+
+
     }
     svg{
         color: white;
