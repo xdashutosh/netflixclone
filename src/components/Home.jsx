@@ -6,6 +6,7 @@ import {FaPlayCircle,FaPlus} from "react-icons/fa";
 
 
 
+
 export default function Home() {
  const apikey="1123b482252bfa1ba7041f03e64e2cec";
  const url="https://api.themoviedb.org/3/movie";
@@ -75,6 +76,9 @@ setpopulararray(results);
         <Row title={upcoming} imgarr={upcomingarray}/>
         <Row title={TopRated} imgarr={Topratedarray}/>
         <Row title={NowPlaying} imgarr={nowplayingarray}/>
+
+
+
     </section>
   )
 }
