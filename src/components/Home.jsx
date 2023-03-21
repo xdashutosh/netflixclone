@@ -2,6 +2,9 @@ import {React ,useEffect,useState} from 'react';
 import "./Home.scss";
 import Row from "./Row";
 import axios from 'axios';
+import {FaPlayCircle,FaPlus} from "react-icons/fa";
+
+
 
 export default function Home() {
  const apikey="1123b482252bfa1ba7041f03e64e2cec";
@@ -10,6 +13,7 @@ export default function Home() {
  const upcoming="upcoming";
  const TopRated="top_rated";
  const NowPlaying="now_playing";
+ const imgurl="https://image.tmdb.org/t/p/original";
 
  const[populararray,setpopulararray]=useState([]);
  const[upcomingarray,setupcomingarray]=useState([]);
@@ -46,7 +50,27 @@ setpopulararray(results);
 
   return (
     <section className="home">
-        <div className="banner"></div>
+        <div className="banner"
+        style={ 
+            {  
+                backgroundImage:populararray[0] ? `url(${`${imgurl}${populararray[0].poster_path}`})` : "black"
+            }
+        }>
+        {populararray[0] && <h1>{populararray[0].original_title}</h1>}
+        {populararray[0] && <p>{populararray[0].overview}</p>}
+        <div className="btn">
+
+        <button>
+            <FaPlayCircle/>
+            Play
+            </button>
+        <button>
+                My List            
+            <FaPlus className='plus'/>
+            </button>        
+        
+        </div>
+        </div>
         <Row title={popular} imgarr={populararray}/>
         <Row title={upcoming} imgarr={upcomingarray}/>
         <Row title={TopRated} imgarr={Topratedarray}/>
